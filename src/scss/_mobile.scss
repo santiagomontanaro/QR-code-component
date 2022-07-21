@@ -1,0 +1,33 @@
+@include device(mobile) {
+    .main {
+        display    : flex;
+        align-items: center;
+        min-height : 100vh;
+        padding    : 2em;
+
+        .qr {
+            padding         : 1.2em 1.2em 2.8em 1.2em;
+            background-color: $White;
+            border-radius   : $borderRadiusCard;
+            @include flex();
+            gap       : 1em;
+            text-align: center;
+
+            .qr__img {
+                img {
+                    width        : 100%;
+                    border-radius: $borderRadiusImg;
+                }
+            }
+
+            .qr__title {
+                color: $Dark-blue;
+            }
+
+            .qr__text {
+                padding: 0 15px;
+                color  : $Grayish-blue;
+            }
+        }
+    }
+}

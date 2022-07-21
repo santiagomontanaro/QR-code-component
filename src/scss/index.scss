@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'global';
+@import 'mixins';
+@import 'mobile';
+
+.main {
+    min-height: 100vh;
+    @include flex();
+
+    .qr {
+        width           : 340px;
+        background-color: $White;
+        @include flex();
+        gap          : 1.3em;
+        text-align   : center;
+        padding      : 1.1em;
+        border-radius: $borderRadiusCard;
+
+        .qr__img {
+            img {
+                width        : 100%;
+                border-radius: $borderRadiusImg;
+            }
+        }
+
+        .qr__title {
+            @include text(1em, $Dark-blue);
+        }
+
+        .qr__text {
+            @include text(2em, $Grayish-blue);
+            margin-bottom: 1em;
+        }
+    }
+}
